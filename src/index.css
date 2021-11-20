@@ -1,13 +1,38 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    user-select: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.drag-area {
+    -webkit-app-region: drag;
 }
+
+.left-arrow::before {
+    content: '>';
+    left: -12px;
+    top: 0;
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.file-item {
+
+}
+
+.checkFile {
+    opacity: 0;
+}
+
+.checkFile:checked {
+    opacity: 1;
+}
+
+/*.file-item:hover .checkFile {*/
+/*    opacity: 1;*/
+/*}*/
